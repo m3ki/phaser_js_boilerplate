@@ -1,0 +1,14 @@
+---
+- name: Install Phaser
+  npm:
+    name: phaser
+    version: '3.1.1'
+    state: latest
+    path: "{{ npm_path }}"
+
+- name: Grunt
+  npm:
+    name: grunt
+    # version: '3.1.1'
+    state: latest
+    path: "{{ npm_path }}"

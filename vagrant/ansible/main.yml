@@ -1,0 +1,9 @@
+---
+
+# include task list in play
+- hosts: all
+  become: true
+  tasks:
+    - include_vars: vars/main.yml
+    - include_tasks: base-os.yml
+    - include_tasks: project.yml
