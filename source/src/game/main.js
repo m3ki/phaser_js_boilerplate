@@ -17,7 +17,7 @@ var config = {
 var game = new Phaser.Game(config);
 
 function preload ()
-{
+{ 
     this.load.setBaseURL('http://labs.phaser.io');
 
     this.load.image('sky', 'assets/skies/space3.png');

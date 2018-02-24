@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": "TODO",
-  "author": "I",
+  "author": "Igor Mekhtiev",
   "license": "MIT",
   "devDependencies": {
     "coffeescript": "^1.12.7",

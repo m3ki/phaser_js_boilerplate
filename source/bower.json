@@ -1,0 +1,27 @@
+{
+  "name": "game",
+  "description": "Boilerplate project for game dev class with phaser.js",
+  "main": "deploy/index.html",
+  "authors": [
+    "Igor Mekhtiev"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/m3ki/phaser_js_boilerplate",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "phaser": "^3.1.2"
+  },
+  "overrides": {
+        "phaser": {
+            "main":
+                ["./dist/phaser.min.js"]
+        }
+    }
+}

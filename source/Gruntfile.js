@@ -38,7 +38,7 @@ module.exports = function(grunt) {
     concat: {
       dist: {
         src: [
-          "node_modules/phaser/dist/phaser.min.js",
+          // "node_modules/phaser/dist/phaser.min.js",
 
           "src/lib/**/*.js",
           "src/game/**/*.js"
@@ -57,11 +57,14 @@ module.exports = function(grunt) {
     },
     bower: {
       flat: {
-        dest: 'scripts',
+        dest: 'src/lib/scripts',
         options: {
           debugging: true
         }
       }
+
+
+
     }
   });
 
