@@ -14,3 +14,14 @@ From the `<project root>/vagrant` directory and run:
 vagrant up
 vagrant ssh
 ```
+
+From vagrant machine 
+```
+cd project/source
+grunt
+```
+
+From host machine navigate to
+```
+http://localhost:9000
+```
