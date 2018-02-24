@@ -1,0 +1,63 @@
+---
+
+
+- name: Install Grunt
+  npm:
+    name: grunt
+    global: yes
+    state: latest
+
+- name: Install Grunt Cli
+  npm:
+    name: grunt-cli
+    global: yes
+    state: latest
+
+- name: Install Bower
+  npm:
+    name: bower
+    global: yes
+    state: present
+
+- name: Install Bowersify
+  npm:
+    name: browserify
+    global: yes
+    state: latest
+
+- name: Install babel
+  npm:
+    name: babel
+    global: yes
+    state: latest
+
+
+- name: Install babelify
+  npm:
+    name: babelify
+    global: yes
+    state: latest
+
+- name: Install babel core
+  npm:
+    name: babel-core
+    global: yes
+    state: latest
+
+
+
+
+
+
+# - file:
+#     src: '/usr/bin/nodejs'
+#     dest: '/usr/bin/node'
+#     state: link
+
+
+# - name: Install Phaser
+#   npm:
+#     name: phaser
+#     version: '3.1.1'
+#     state: absent
+#     path: "{{ npm_path }}"

@@ -24,6 +24,20 @@
     - tree
     - wget
     - open-vm-tools
-    - nodejs
-    - npm
     - nginx
+
+- name: Delete NGINX config
+  file:
+    state: absent
+    path: /etc/nginx/sites-available/default
+
+# Example from Ansible Playbooks
+- copy:
+    src: files/nginx/default
+    dest: /etc/nginx/sites-available/default
+    owner: root
+    group: root
+    mode: 0644
+
+- name: restart nginx
+  service: name=nginx state=restarted
