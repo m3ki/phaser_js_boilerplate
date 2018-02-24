@@ -2,7 +2,7 @@
 
 ## Vagrant installation
 
-This project includes a [Vagrant](https://www.vagrantup.com/) development server.
+Install  [Vagrant](https://www.vagrantup.com/downloads.html)
 
 ## Starting up Vagrant box
 
