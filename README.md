@@ -23,5 +23,5 @@ grunt
 
 From host machine navigate to
 ```
-http://localhost:9000
+http://localhost:8000
 ```
