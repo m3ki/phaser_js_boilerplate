@@ -1,3 +1,4 @@
 ---
 
-npm_path: /home/vagrant/project/src/dist
+npm_path:   /home/vagrant/project/source
+bower_path: /home/vagrant/project/source

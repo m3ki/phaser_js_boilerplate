@@ -45,7 +45,14 @@
     state: latest
 
 
+- name: Install Missing Node components
+  npm:
+    path: "{{ npm_path }}"
+    state: latest
 
+- name: Install packages based on bower.json.
+  bower:
+    path: "{{bower_path}}"
 
 
 
@@ -53,11 +60,3 @@
 #     src: '/usr/bin/nodejs'
 #     dest: '/usr/bin/node'
 #     state: link
-
-
-# - name: Install Phaser
-#   npm:
-#     name: phaser
-#     version: '3.1.1'
-#     state: absent
-#     path: "{{ npm_path }}"
