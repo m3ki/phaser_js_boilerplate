@@ -2,7 +2,8 @@
 
 ## Vagrant installation
 
-Install  [Vagrant](https://www.vagrantup.com/downloads.html)
+- Install  [Vagrant](https://www.vagrantup.com/downloads.html)
+- Ensure that [VirtualBox](https://www.virtualbox.org/) or your favorite virtualization software is installed.
 
 ## Starting up Vagrant box
 
