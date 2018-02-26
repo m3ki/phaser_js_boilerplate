@@ -1,6 +1,4 @@
 ---
-
-
 - name: Install Grunt
   npm:
     name: grunt
@@ -44,7 +42,26 @@
     global: yes
     state: latest
 
+- name: create /bower_components folders
+  file:
+    dest: /node_tmp/node_modules
+    state: directory
 
+- name: create /bower_components folders
+  file:
+    dest: /node_tmp/bower_components
+    state: directory
+
+- file:
+    src:   /node_tmp/node_modules
+    dest:  '{{ npm_path }}/node_modules'
+    state: link
+
+- file:
+    src:   /node_tmp/bower_components
+    dest:  '{{ npm_path }}/bower_components'
+    state: link
+#
 - name: Install Missing Node components
   npm:
     path: "{{ npm_path }}"
@@ -53,10 +70,3 @@
 - name: Install packages based on bower.json.
   bower:
     path: "{{bower_path}}"
-
-
-
-# - file:
-#     src: '/usr/bin/nodejs'
-#     dest: '/usr/bin/node'
-#     state: link
