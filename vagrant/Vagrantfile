@@ -13,7 +13,10 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     v.name = "phaser.dev"
     v.memory = 4096
     v.cpus = 1
+    v.customize ["setextradata", :id, "VBoxInternal2/SharedFoldersEnableSymlinksCreate/v-root", "1"]
   end
+
+
 
   config.vm.network "forwarded_port", guest: 80, host: 8000
   config.vm.network "forwarded_port", guest: 9000, host: 9000
