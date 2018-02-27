@@ -8,6 +8,7 @@
 ## Starting up Vagrant box
 
 From the `<project root>/vagrant` directory and run:
+#### On windows run the command line as an Administrator
 
 ```
 vagrant up
