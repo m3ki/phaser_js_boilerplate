@@ -10,6 +10,10 @@
   "author": "Igor Mekhtiev",
   "license": "MIT",
   "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "babelify": "^8.0.0",
     "coffeescript": "^1.12.7",
     "esprima": "^4.0.0",
     "grunt": "^1.0.2",

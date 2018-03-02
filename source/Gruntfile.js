@@ -16,14 +16,10 @@ module.exports = function(grunt) {
           browserifyOptions: {
             debug: true
           },
-          transform: [
-            ["babelify", {
-              "stage": 1
-            }]
-          ]
+          transform: [["babelify", { "presets": "env" }]]
         },
-        src: "src/app.js",
-        dest: "scripts/app.js"
+        src: "src/game/*.js",
+        dest: "src/lib/scripts/app.js"
       }
     },
     connect: {
@@ -41,19 +37,18 @@ module.exports = function(grunt) {
           // "node_modules/phaser/dist/phaser.min.js",
 
           "src/lib/**/*.js",
-          "src/game/**/*.js"
+          //  "src/game/translated/**/*.js",
+          "src/scripts/**/*.js"
         ],
         dest: 'deploy/js/<%= pkg.name %>.js'
       }
     },
     watch: {
       files: 'src/**/*.js',
-      tasks: ['concat']
-    },
-    open: {
-      dev: {
-        path: 'http://localhost:8080/index.html'
-      }
+      tasks: ['browserify'],
+        options: {
+            spawn: false,
+        }
     },
     bower: {
       flat: {
@@ -68,6 +63,6 @@ module.exports = function(grunt) {
     }
   });
 
-  grunt.registerTask('default', ['bower', 'concat', 'connect', 'open', 'watch']);
+  grunt.registerTask('default', ['bower', 'concat', 'connect', 'watch']);
 
 }
