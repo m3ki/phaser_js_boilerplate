@@ -42,15 +42,19 @@
     global: yes
     state: latest
 
-- name: create /bower_components folders
+- name: create /node_modules folders
   file:
     dest: /node_tmp/node_modules
     state: directory
+    owner: vagrant
+    group: vagrant
 
 - name: create /bower_components folders
   file:
     dest: /node_tmp/bower_components
     state: directory
+    owner: vagrant
+    group: vagrant
 
 - file:
     src:   /node_tmp/node_modules

@@ -10,7 +10,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.synced_folder "../.", "/home/vagrant/project"
 
   config.vm.provider :virtualbox do |v|
-    v.name = "phaser.dev"
+    v.name = "phaser.dev.template"
     v.memory = 4096
     v.cpus = 1
     v.customize ["setextradata", :id, "VBoxInternal2/SharedFoldersEnableSymlinksCreate/v-root", "1"]
