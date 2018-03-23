@@ -4,7 +4,7 @@
   apt:
     update_cache: yes
     upgrade: full
-    cache_valid_time: 300
+    cache_valid_time: 3600
 
 - name: install packages
   apt: pkg={{ item }} state=present
@@ -25,6 +25,7 @@
     - wget
     - open-vm-tools
     - nginx
+    - bindfs
 
 - name: Delete NGINX config
   file:
